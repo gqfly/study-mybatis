@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gqfly.mybatis.conf.mapper.AuthorMapper">
+
+    <sql id="Base_Column_List">
+        id,
+        name,
+        created_time,
+        updated_time
+    </sql>
+
+    <!-- keyProperty属性指定对象的属性，将获取到自动生成的主键值赋给该属性 -->
+    <insert id="insert" parameterType="com.gqfly.mybatis.conf.entity.Author" keyProperty="id">
+        insert into ms_author (name, created_time, updated_time) values (#{author.name}, #{author.createdTime}, #{author.updatedTime})
+    </insert>
+
+    <select id="selectById" resultType="com.gqfly.mybatis.conf.entity.Author">
+        select <include refid="Base_Column_List" /> from ms_author where id = #{id}
+    </select>
+</mapper>

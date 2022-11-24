@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 属性可以进行外部配置，并进行动态替换 -->
+    <properties resource="jdbc.properties">
+        <property name="org.apache.ibatis.parsing.PropertyParser.enable-default-value" value="true"/>
+        <property name="org.apache.ibatis.parsing.PropertyParser.default-value-separator" value="?:"/>
+        <property name="jdbc.username" value="root"/>
+    </properties>
+    <settings>
+        <setting name="useGeneratedKeys" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password?:123456}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/BlogMapper.xml"/>
+        <mapper resource="mapper/AuthorMapper.xml"/>
+    </mappers>
+</configuration>

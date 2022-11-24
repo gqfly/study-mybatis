@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.gqfly.mybatis.env.mapper.BlogMapper">
+<mapper namespace="com.gqfly.mybatis.conf.mapper.BlogMapper">
 
-    <resultMap id="BaseResultMap" type="com.gqfly.mybatis.env.entity.Blog">
+    <resultMap id="BaseResultMap" type="com.gqfly.mybatis.conf.entity.Blog">
         <id property="id" column="id" />
         <result property="author" column="author" />
         <result property="title" column="title" />
@@ -18,7 +18,7 @@
         details
     </sql>
 
-    <select id="selectById" resultType="com.gqfly.mybatis.env.entity.Blog">
+    <select id="selectById" resultType="com.gqfly.mybatis.conf.entity.Blog">
         select * from ms_blog where id = #{id}
     </select>
 </mapper>

@@ -1,6 +1,6 @@
-package com.gqfly.mybatis.mapper;
+package com.gqfly.mybatis.conf.mapper;
 
-import com.gqfly.mybatis.entity.Blog;
+import com.gqfly.mybatis.conf.entity.Blog;
 
 /**
  * @author gqfly

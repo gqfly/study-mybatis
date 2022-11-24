@@ -1,7 +1,7 @@
-package com.gqfly.mybatis;
+package com.gqfly.mybatis.env;
 
-import com.gqfly.mybatis.entity.Blog;
-import com.gqfly.mybatis.mapper.BlogMapper;
+import com.gqfly.mybatis.env.entity.Blog;
+import com.gqfly.mybatis.env.mapper.BlogMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

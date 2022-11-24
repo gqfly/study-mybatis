@@ -1,4 +1,4 @@
-package com.gqfly.mybatis.entity;
+package com.gqfly.mybatis.env.entity;
 
 import lombok.Data;
 
